@@ -6,7 +6,7 @@ interface IconProps {
   textForIcon: string
 }
 
-const Like: React.FC<IconProps> = ({ icon, textForIcon }) => {
+const Icon: React.FC<IconProps> = ({ icon, textForIcon }) => {
   return (
     <Space>
       {React.createElement(icon)}
@@ -15,4 +15,4 @@ const Like: React.FC<IconProps> = ({ icon, textForIcon }) => {
   );
 }
 
-export default Like;
+export default Icon;
