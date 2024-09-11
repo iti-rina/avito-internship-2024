@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { List } from "antd";
 import { AdvertisementCard } from "@features/AdvertisementCard";
-import { Advertisements } from "@shared/types";
+import { observer } from "mobx-react-lite";
+import { advertisementsStore } from "@app/store";
 
-const AdvertisementsList: React.FC<Advertisements> = ({advertisements}) => {
+const AdvertisementsList: React.FC = observer(() => {
+  useEffect(() => {
+    advertisementsStore.getAdvertisements();
+  }, []);
+
+  if (advertisementsStore.loading) {
+    return <div>Загрузка...</div>
+  }
+
+  if (advertisementsStore.error) {
+    return <div>Error: {advertisementsStore.error}</div>
+  }
+  
   return (
     <List
       itemLayout="vertical"
       size="large"
-      dataSource={advertisements}
+      dataSource={advertisementsStore.advertisements}
       renderItem={item => (
         <AdvertisementCard
           name={item.name}
@@ -20,6 +33,6 @@ const AdvertisementsList: React.FC<Advertisements> = ({advertisements}) => {
       )}
     />
   );
-}
+});
 
 export default AdvertisementsList;
