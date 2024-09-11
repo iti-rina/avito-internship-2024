@@ -1,5 +1,5 @@
-import { makeAutoObservable, runInAction } from "mobx";
-import { AdvertisementType } from "@shared/types";
+import { makeAutoObservable, runInAction } from 'mobx';
+import { AdvertisementType } from '@shared/types';
 
 class AdvertisementsStore {
   advertisements: AdvertisementType[] = [];
@@ -17,7 +17,7 @@ class AdvertisementsStore {
     try {
       const response = await fetch('http://localhost:3000/advertisements');
       if (!response.ok) {
-        throw new Error("Error while getting a list of advertisements");
+        throw new Error('Error while getting a list of advertisements');
       }
       const data = await response.json();
 
