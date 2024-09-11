@@ -1,15 +1,10 @@
-import React from "react";
+import React from 'react';
+import { AdvertisementsList } from '@features/AdvertisementsList';
+import { Pagination } from '@widgets/pagination';
+import { advertisementsStore } from '@app/store';
 
-import { AdvertisementsList } from "@features/AdvertisementsList";
-import { Pagination } from "@widgets/pagination";
-import { advertisements } from '../data';
-
-
-interface Props {
-
-}
-
-const AdvertisementsPage: React.FC<Props> = () => {
+const AdvertisementsPage: React.FC = () => {
+  const { advertisements } = advertisementsStore;
   let total = advertisements.length;
   let defaultPageSize = 10;
   let defaultCurrent = 1;
@@ -17,10 +12,10 @@ const AdvertisementsPage: React.FC<Props> = () => {
   return (
     <main>
       <h1>Мои объявления</h1>
-      <AdvertisementsList advertisements={advertisements}/>
+      <AdvertisementsList />
       <Pagination 
         total={total}
-        showTotal={(total) => `Total ${total} items`}
+        showTotal={(total) => `Всего ${total}`}
         defaultPageSize={defaultPageSize}
         defaultCurrent={defaultCurrent}
       />
