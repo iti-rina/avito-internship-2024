@@ -1,3 +1,4 @@
-import { advertisementsStore } from './AdvertisementsStore'
+import { advertisementsStore } from './AdvertisementsStore';
+import { ordersStore } from './OrdersStore';
 
-export { advertisementsStore };
+export { advertisementsStore, ordersStore };
