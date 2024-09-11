@@ -9,7 +9,7 @@ export type AdvertisementType = {
   imageUrl?: string;
 }
 
-export type Advertisements = {
+export type AdvertisementsType = {
   advertisements: AdvertisementType[]
 }
 
