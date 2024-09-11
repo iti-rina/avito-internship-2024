@@ -1,4 +1,4 @@
-export type Advertisment = {
+export type Advertisement = {
   id: string;
   name: string;
   description?: string;
@@ -10,7 +10,7 @@ export type Advertisment = {
 }
 
 export type Advertisements = {
-  advertisements: Advertisment[]
+  advertisements: Advertisement[]
 }
 
 
@@ -25,7 +25,7 @@ const OrderStatus = {
 } as const;
 
 
-export type OrderItem = Advertisment & { count: number; };
+export type OrderItem = Advertisement & { count: number; };
 
 export type Order = {
   id: string;
