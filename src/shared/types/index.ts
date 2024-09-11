@@ -1,4 +1,4 @@
-export type Advertisement = {
+export type AdvertisementType = {
   id: string;
   name: string;
   description?: string;
@@ -10,7 +10,7 @@ export type Advertisement = {
 }
 
 export type Advertisements = {
-  advertisements: Advertisement[]
+  advertisements: AdvertisementType[]
 }
 
 
@@ -25,20 +25,20 @@ const OrderStatus = {
 } as const;
 
 
-export type OrderItem = Advertisement & { count: number; };
+export type OrderItemType = AdvertisementType & { count: number; };
 
-export type Order = {
+export type OrderType = {
   id: string;
   status: typeof OrderStatus[keyof typeof OrderStatus];
   createdAt: string;
   finishedAt?: string;
-  items: Array<OrderItem>;
+  items: Array<OrderItemType>;
   deliveryWay: string;
   total: number;
 }
 
-export type Orders = {
-  orders: Order[]
+export type OrdersType = {
+  orders: OrderType[]
 }
 
 type Image = {
