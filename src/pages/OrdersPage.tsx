@@ -2,6 +2,7 @@ import React from 'react';
 import { OrdersList } from '@features/OrdersList';
 import { Pagination } from '@widgets/pagination';
 import { ordersStore } from '@app/store';
+import { FilterComponent } from '@widgets/filter/idex';
 
 const OrdersPage: React.FC = () => {
   const { orders } = ordersStore;
@@ -10,16 +11,19 @@ const OrdersPage: React.FC = () => {
   let defaultCurrent = 1;
 
   return (
-    <main>
-      <h1>Заказы</h1>
-      <OrdersList />
-      <Pagination 
-        total={total}
-        showTotal={(total) => `Всего ${total}`}
-        defaultPageSize={defaultPageSize}
-        defaultCurrent={defaultCurrent}
-      />
-    </main>
+    <>
+      <FilterComponent />
+      <main>
+        <h1>Заказы</h1>
+        <OrdersList />
+        <Pagination 
+          total={total}
+          showTotal={(total) => `Всего ${total}`}
+          defaultPageSize={defaultPageSize}
+          defaultCurrent={defaultCurrent}
+        />
+      </main>
+    </>
 
   );
 }
