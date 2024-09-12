@@ -1,6 +1,5 @@
 import React from 'react';
 import { Header } from '@widgets/header';
-import { AdvertisementsPage } from '@pages/index';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routes } from './routing';
 
