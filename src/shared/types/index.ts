@@ -1,5 +1,8 @@
-export type AdvertisementType = {
+export type AdvertisementType = AdvertisementToSendType & {
   id: string;
+}
+
+export type AdvertisementToSendType = {
   name: string;
   description?: string;
   price: number;
