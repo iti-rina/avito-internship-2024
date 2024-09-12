@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run apiserver\" \"npm run client\"",
-    "apiserver": "json-server --watch configs/db.json --port 3000",
+    "apiserver": "json-server --watch configs/db.json --host 0.0.0.0 --port 3000",
     "client": "webpack serve",
     "build": "webpack",
     "build-prod": "webpack --mode=production",
