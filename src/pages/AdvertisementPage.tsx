@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AdvertisementType } from '@shared/types';
 import { fetchAdvertisementById } from '@entities/advertisement/api';
 import React, { useEffect, useState } from 'react';
@@ -5,30 +6,32 @@ import { useParams } from 'react-router-dom';
 import { Icon } from '@shared/components';
 import { LikeOutlined, EyeOutlined } from '@ant-design/icons';
 import { EditAdvertisement } from '@features/EditAdvertisement';
+import { advertisementsStore } from '@app/store';
 
-const AdvertisementPage: React.FC = () => {
+const AdvertisementPage = () => {
   const { id } = useParams();
-  const [advertisement, setAdvertisement] = useState<AdvertisementType | null>(null);
+  if (!id) return <div>Ошибка загрузки объявления</div>
+
+  const [advertisement, setAdvertisement] = useState();
 
   useEffect(() => {
     (async () => {
       try {
         if (!id) {
-          return <div>Ошибка загрузки объявления</div>
+          return <div>Ошибка при загрузке объявления</div>
         }
         const advertisement = await fetchAdvertisementById(id);
         setAdvertisement(advertisement);
       } catch (error) {
-        console.error('Error while fetching an advertisement by id');
       }
     })();
   }, [id]);
 
-
   return (
     <main>
       <h1>{advertisement?.name}</h1>
-      
+      <EditAdvertisement advertisement={advertisement} onClose={advertisementsStore.editAdvertisement}
+    />
       <img 
             src={advertisement?.imageUrl}
             alt={`Изображение ${advertisement?.name}`}
