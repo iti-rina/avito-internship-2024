@@ -16,7 +16,6 @@ export type AdvertisementsType = {
   advertisements: AdvertisementType[]
 }
 
-
 const OrderStatus = {
   Created: 0,
   Paid: 1,
