@@ -59,6 +59,33 @@ class AdvertisementsStore {
     }
   }
 
+  async searchAvertisementsByName(searchQuery: string) {
+    this.loading = true;
+    this.error = null;
+
+    try {
+      const response = await fetch(`http://localhost:3000/advertisements?name_like=${searchQuery}`);
+      if (!response.ok) {
+        throw new Error('Error while getting a list of advertisements');
+      }
+
+      const data = await response.json();
+      this.totalCount = data.length;
+
+      runInAction(() => {
+        this.advertisements = [...data];
+        this.currentPage = 1;
+        this.loading = false;
+
+      });
+    } catch (error: any) {
+      runInAction(() => {
+        this.error = error.message;
+        this.loading = false;
+      });
+    }
+  }
+
 
   setPage(page: number) {
     this.currentPage = page;
