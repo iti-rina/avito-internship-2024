@@ -30,6 +30,7 @@ const NewAdvertisement: React.FC = observer(() => {
         title='Новое объявление'
         open={open}
         onCancel={handleClose}
+        footer={null}
       >
         <Form
           form={form}
