@@ -3,8 +3,8 @@
     {
       "id": "1",
       "name": "Стул старинный",
-      "description": "Очень красивый",
-      "price": 2000,
+      "description": "Очень красивый!",
+      "price": 20001,
       "createdAt": "2022-08-12T20:16:55.351Z",
       "views": 20,
       "likes": 2,
@@ -21,13 +21,11 @@
       "imageUrl": ""
     },
     {
-      "id": "3",
       "name": "Плащ невидимка",
+      "description": "Арака",
       "price": 10000000,
-      "createdAt": "2024-08-12T20:16:55.351Z",
-      "views": 900,
-      "likes": 19,
-      "imageUrl": ""
+      "imageUrl": "Тест",
+      "id": "3"
     },
     {
       "id": "4",
@@ -203,6 +201,198 @@
           "count": 5
         }
       ]
-    }
-  ]
+    },
+    {
+      "id": "3",
+      "status": 1,
+      "createdAt": "2024-07-15T18:10:25.351Z",
+      "finishedAt": "",
+      "total": 155000,
+      "deliveryWay": "mail",
+      "items": [
+        {
+          "id": "3",
+          "name": "Электросамокат",
+          "description": "Мощный и быстрый электросамокат.",
+          "price": 85000,
+          "createdAt": "2024-07-10T14:45:33.351Z",
+          "views": 12345,
+          "likes": 567,
+          "imageUrl": "",
+          "count": 1
+        },
+        {
+          "id": "9",
+          "name": "Шлем для электросамоката",
+          "price": 7000,
+          "createdAt": "2024-07-05T12:20:15.351Z",
+          "views": 4567,
+          "likes": 89,
+          "imageUrl": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "status": 2,
+      "createdAt": "2024-06-22T15:40:12.351Z",
+      "finishedAt": "",
+      "total": 84000,
+      "deliveryWay": "pickup",
+      "items": [
+        {
+          "id": "4",
+          "name": "Гитара",
+          "description": "Акустическая гитара, дерево, 6 струн.",
+          "price": 40000,
+          "createdAt": "2024-06-20T10:30:55.351Z",
+          "views": 34567,
+          "likes": 1500,
+          "imageUrl": "",
+          "count": 1
+        },
+        {
+          "id": "7",
+          "name": "Комплект струн для гитары",
+          "price": 1500,
+          "createdAt": "2024-06-21T08:40:12.351Z",
+          "views": 456,
+          "likes": 12,
+          "imageUrl": "",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "status": 5,
+      "createdAt": "2024-08-05T09:25:45.351Z",
+      "finishedAt": "2024-08-10T14:20:55.351Z",
+      "total": 56000,
+      "deliveryWay": "cdek",
+      "items": [
+        {
+          "id": "10",
+          "name": "Смарт-часы",
+          "description": "Умные часы с фитнес-функциями.",
+          "price": 56000,
+          "createdAt": "2024-07-30T10:10:30.351Z",
+          "views": 9876,
+          "likes": 567,
+          "imageUrl": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "status": 6,
+      "createdAt": "2024-07-01T12:00:00.351Z",
+      "finishedAt": "2024-07-10T18:45:30.351Z",
+      "total": 15000,
+      "deliveryWay": "post",
+      "items": [
+        {
+          "id": "11",
+          "name": "Беспроводные наушники",
+          "price": 15000,
+          "createdAt": "2024-06-29T09:25:45.351Z",
+          "views": 4567,
+          "likes": 123,
+          "imageUrl": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "status": 3,
+      "createdAt": "2024-07-22T13:15:55.351Z",
+      "finishedAt": "",
+      "total": 23000,
+      "deliveryWay": "mail",
+      "items": [
+        {
+          "id": "12",
+          "name": "Кофеварка",
+          "price": 23000,
+          "createdAt": "2024-07-20T10:55:33.351Z",
+          "views": 5678,
+          "likes": 230,
+          "imageUrl": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "status": 0,
+      "createdAt": "2024-08-01T10:20:55.351Z",
+      "finishedAt": "",
+      "total": 99000,
+      "deliveryWay": "sdek",
+      "items": [
+        {
+          "id": "13",
+          "name": "Геймерская клавиатура",
+          "price": 50000,
+          "createdAt": "2024-07-30T12:15:55.351Z",
+          "views": 1234,
+          "likes": 345,
+          "imageUrl": "",
+          "count": 1
+        },
+        {
+          "id": "14",
+          "name": "Геймерская мышь",
+          "price": 49000,
+          "createdAt": "2024-07-28T09:35:55.351Z",
+          "views": 987,
+          "likes": 120,
+          "imageUrl": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "status": 1,
+      "createdAt": "2024-08-08T14:30:55.351Z",
+      "finishedAt": "",
+      "total": 7500,
+      "deliveryWay": "pickup",
+      "items": [
+        {
+          "id": "15",
+          "name": "Флешка 64 ГБ",
+          "price": 7500,
+          "createdAt": "2024-08-07T08:50:55.351Z",
+          "views": 123,
+          "likes": 12,
+          "imageUrl": "",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "status": 4,
+      "createdAt": "2024-07-10T18:20:55.351Z",
+      "finishedAt": "2024-07-12T10:20:55.351Z",
+      "total": 42000,
+      "deliveryWay": "post",
+      "items": [
+      {        
+        "id": "16",
+        "name": "Электрический чайник",
+        "price": 42000,
+        "createdAt": "2024-07-09T14:10:45.351Z",
+        "views": 3421,
+        "likes": 210,
+        "imageUrl": "",
+        "count": 1
+      }
+    ]
+  }]
 }
