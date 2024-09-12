@@ -86,7 +86,7 @@ class AdvertisementsStore {
     }
   }
 
-  async editAdvertisement() {
+  async editAdvertisement(payload: AdvertisementToSendType) {
     try {
       const response = await fetch('http://localhost:3000/advertisements', {
         method: 'POST',
