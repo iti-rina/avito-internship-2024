@@ -6,13 +6,13 @@ import { FilterComponent } from '@widgets/filter/idex';
 
 const OrdersPage: React.FC = () => {
   return (
-    <>
+    <div style={{paddingTop: '60px'}}>
       <FilterComponent />
       <main>
         <h1>Заказы</h1>
         <OrdersList />
       </main>
-    </>
+    </div>
 
   );
 }
