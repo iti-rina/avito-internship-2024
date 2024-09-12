@@ -1,6 +1,5 @@
 import React from 'react';
 import { Input, GetProps } from 'antd';
-import { searchAdvertisementByName } from '@entities/advertisement/api';
 import { observer } from 'mobx-react-lite';
 import { advertisementsStore } from '@app/store';
 
