@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, MenuProps } from 'antd';
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 type MenuItem = Required<MenuProps>['items'];
 
@@ -16,7 +17,8 @@ const tabs: MenuItem = [
 ]
 
 const Navigation: React.FC = () => {
-  const [currentTab, setCurrentTab] = useState('advertisements');
+  const currentLocation = useLocation();
+  const [currentTab, setCurrentTab] = useState(currentLocation.pathname);
   const handleTabClick: MenuProps['onClick'] = (event) => {
     if (currentTab !== event.key) {
       setCurrentTab(event.key);
@@ -26,8 +28,15 @@ const Navigation: React.FC = () => {
     <Menu 
     onClick={handleTabClick}
     selectedKeys={[currentTab]} 
-    mode='horizontal' 
-    items={tabs} />
+    mode='horizontal'
+    >
+      <Menu.Item key='/advertisements'>
+        <Link to='/advertisements'>Объявления</Link>
+      </Menu.Item>
+      <Menu.Item key='/orders'>
+        <Link to='/orders'>Заказы</Link>
+      </Menu.Item>
+    </Menu>
   );
 }
 
