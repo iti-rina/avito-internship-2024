@@ -5,10 +5,12 @@ import { Routes } from './routing';
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Header />
-      <Routes />
-    </Router>
+      <Router>
+        <div style={{padding: '0 30px'}}>
+          <Header />
+          <Routes />
+        </div>
+      </Router>
   );
 };
 

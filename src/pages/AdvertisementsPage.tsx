@@ -3,17 +3,23 @@ import { AdvertisementsList } from '@features/AdvertisementsList';
 import { Pagination } from '@widgets/pagination';
 import { advertisementsStore } from '@app/store';
 import { NewAdvertisement } from '@features/NewAdvertisement';
+import { Typography } from 'antd';
+import SearchBar from '@widgets/header/SearchBar';
+
+const { Title } = Typography;
 
 const AdvertisementsPage: React.FC = () => {
   const { advertisements } = advertisementsStore;
-  let total = advertisements.length;
 
   return (
-    <main>
-      <h1>Мои объявления</h1>
-      <NewAdvertisement />
-      <AdvertisementsList />
-      <Pagination />
+    <main style={{paddingTop: '60px', display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+          <Title>Мои объявления</Title>
+          <NewAdvertisement />
+        </div>
+        <SearchBar />
+        <AdvertisementsList />
+        <Pagination />
     </main>
 
   );

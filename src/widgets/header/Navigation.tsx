@@ -26,9 +26,17 @@ const Navigation: React.FC = () => {
   }
   return (
     <Menu 
-    onClick={handleTabClick}
-    selectedKeys={[currentTab]} 
-    mode='horizontal'
+      onClick={handleTabClick}
+      selectedKeys={[currentTab]} 
+      mode='horizontal'
+      style={{
+        width: '100vw',
+        height: '60px',
+        backgroundColor: '#fff',
+        position: 'fixed',
+        top: '0',
+        zIndex: '5000'
+      }}
     >
       <Menu.Item key='/advertisements'>
         <Link to='/advertisements'>Объявления</Link>
