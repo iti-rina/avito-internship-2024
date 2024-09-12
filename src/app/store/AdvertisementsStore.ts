@@ -1,5 +1,5 @@
 import { makeAutoObservable, runInAction } from 'mobx';
-import { AdvertisementType } from '@shared/types';
+import { AdvertisementType, AdvertisementToSendType } from '@shared/types';
 
 class AdvertisementsStore {
   advertisements: AdvertisementType[] = [];
@@ -30,6 +30,27 @@ class AdvertisementsStore {
         this.error = error.message;
         this.loading = false;
       });
+    }
+  }
+
+  async addNewAdvertisement (payload: AdvertisementToSendType) {
+    try {
+      const response = await fetch('http://localhost:3000/advertisements', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) {
+        throw new Error('Error while sending a new advertisement to the server');
+      }
+      const data = await response.json();
+
+      runInAction(() => {
+        this.advertisements.push(data);
+      });
+    } catch {
     }
   }
 }
