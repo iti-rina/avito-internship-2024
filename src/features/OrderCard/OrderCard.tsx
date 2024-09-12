@@ -20,7 +20,7 @@ const OrderCard: React.FC<OrderType> = ({ id, status, createdAt, finishedAt=null
       <List.Item.Meta 
         title={`Заказ от ${dateOfCreation}`}
       />
-      <p>{id}</p>
+      <p>№ {id}</p>
       <p>{currentStatus}</p>
       { dateOfFinish ? <p>Заказ будет завершён {dateOfFinish}</p> : <></>}
       <p>Товаров в заказе: {items.length}</p>
