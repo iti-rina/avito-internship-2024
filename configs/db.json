@@ -3,12 +3,12 @@
     {
       "id": "1",
       "name": "Стул старинный",
-      "description": "Очень красивый!",
-      "price": 20001,
+      "description": "Очень красивый",
+      "price": 2000,
       "createdAt": "2022-08-12T20:16:55.351Z",
       "views": 20,
       "likes": 2,
-      "imageUrl": ""
+      "imageUrl": "https://picsum.photos/300/300"
     },
     {
       "id": "2",
@@ -18,14 +18,16 @@
       "createdAt": "2023-08-12T20:16:55.351Z",
       "views": 77832,
       "likes": 45666,
-      "imageUrl": ""
+      "imageUrl": "https://picsum.photos/300/301"
     },
     {
+      "id": "3",
       "name": "Плащ невидимка",
-      "description": "Арака",
       "price": 10000000,
-      "imageUrl": "Тест",
-      "id": "3"
+      "createdAt": "2024-08-12T20:16:55.351Z",
+      "views": 900,
+      "likes": 19,
+      "imageUrl": "https://picsum.photos/300/302"
     },
     {
       "id": "4",
@@ -35,7 +37,7 @@
       "createdAt": "2024-07-12T20:16:55.351Z",
       "views": 2000000,
       "likes": 2,
-      "imageUrl": ""
+      "imageUrl": "https://picsum.photos/300/303"
     },
     {
       "id": "5",
@@ -44,7 +46,7 @@
       "createdAt": "2024-06-12T20:16:55.351Z",
       "views": 0,
       "likes": 0,
-      "imageUrl": ""
+      "imageUrl": "https://picsum.photos/300/304"
     },
     {
       "id": "6",
@@ -54,7 +56,7 @@
       "createdAt": "2024-04-12T20:16:55.351Z",
       "views": 1,
       "likes": 0,
-      "imageUrl": ""
+      "imageUrl": "https://picsum.photos/300/305"
     },
     {
       "id": "7",
@@ -64,7 +66,7 @@
       "createdAt": "2024-08-12T14:16:55.351Z",
       "views": 20000,
       "likes": 1,
-      "imageUrl": ""
+      "imageUrl": "https://picsum.photos/300/306"
     },
     {
       "id": "8",
@@ -73,7 +75,7 @@
       "createdAt": "2024-08-12T12:16:55.351Z",
       "views": 200000,
       "likes": 302,
-      "imageUrl": ""
+      "imageUrl": "https://picsum.photos/300/307"
     },
     {
       "id": "16c5",
@@ -82,7 +84,7 @@
       "createdAt": "2024-08-12T12:16:55.351Z",
       "views": 200,
       "likes": 300,
-      "imageUrl": ""
+      "imageUrl": "https://picsum.photos/300/308"
     },
     {
       "id": "8c4f",
@@ -91,14 +93,14 @@
       "createdAt": "2024-08-12T12:16:55.351Z",
       "views": 200,
       "likes": 300,
-      "imageUrl": ""
+      "imageUrl": "https://picsum.photos/300/309"
     },
     {
       "id": "c149",
       "name": "тест",
       "description": "тест",
       "price": 123,
-      "imageUrl": "тест",
+      "imageUrl": "https://picsum.photos/300/310",
       "views": 0,
       "likes": 0
     },
@@ -107,7 +109,7 @@
       "name": "тест",
       "description": "тест",
       "price": 123,
-      "imageUrl": "тест",
+      "imageUrl": "https://picsum.photos/300/311",
       "views": 0,
       "likes": 0
     },
@@ -116,7 +118,7 @@
       "name": "Ирина",
       "description": "Ирина",
       "price": 123,
-      "imageUrl": "Ирина",
+      "imageUrl": "https://picsum.photos/300/312",
       "views": 0,
       "likes": 0
     },
@@ -125,7 +127,7 @@
       "name": "1",
       "description": "Ирина",
       "price": 12,
-      "imageUrl": "Ирина",
+      "imageUrl": "https://picsum.photos/300/313",
       "views": 0,
       "likes": 0
     },
@@ -133,7 +135,7 @@
       "name": "Последний файл",
       "description": "Тест",
       "price": 1200,
-      "imageUrl": "екле",
+      "imageUrl": "https://picsum.photos/300/314",
       "views": 0,
       "likes": 0,
       "id": "Zez19lB"
@@ -145,7 +147,7 @@
       "status": 0,
       "createdAt": "2024-08-12T20:20:55.351Z",
       "finishedAt": "",
-      "total": 314000,
+      "total": 107000,
       "deliveryWay": "mail",
       "items": [
         {
@@ -155,19 +157,19 @@
           "createdAt": "2024-08-12T12:16:55.351Z",
           "views": 200000,
           "likes": 302,
-          "imageUrl": "",
-          "count": 3
+          "imageUrl": "https://picsum.photos/300/307",
+          "count": 1
         },
         {
           "id": "6",
           "name": "Картонная коробка",
-          "description": "Почная.",
+          "description": "Прочная.",
           "price": 7000,
           "createdAt": "2024-04-12T20:16:55.351Z",
           "views": 1,
           "likes": 0,
-          "imageUrl": "",
-          "count": 2
+          "imageUrl": "https://picsum.photos/300/305",
+          "count": 1
         }
       ]
     },
@@ -176,7 +178,7 @@
       "status": 4,
       "createdAt": "2024-08-12T20:20:55.351Z",
       "finishedAt": "2024-08-12T20:25:55.351Z",
-      "total": 33000,
+      "total": 9000,
       "deliveryWay": "sdek",
       "items": [
         {
@@ -187,8 +189,8 @@
           "createdAt": "2023-08-12T20:16:55.351Z",
           "views": 77832,
           "likes": 45666,
-          "imageUrl": "",
-          "count": 10
+          "imageUrl": "https://picsum.photos/300/301",
+          "count": 2
         },
         {
           "id": "5",
@@ -197,8 +199,8 @@
           "createdAt": "2024-06-12T20:16:55.351Z",
           "views": 0,
           "likes": 0,
-          "imageUrl": "",
-          "count": 5
+          "imageUrl": "https://picsum.photos/300/304",
+          "count": 1
         }
       ]
     },
@@ -207,18 +209,17 @@
       "status": 1,
       "createdAt": "2024-07-15T18:10:25.351Z",
       "finishedAt": "",
-      "total": 155000,
+      "total": 92000,
       "deliveryWay": "mail",
       "items": [
         {
           "id": "3",
-          "name": "Электросамокат",
-          "description": "Мощный и быстрый электросамокат.",
-          "price": 85000,
-          "createdAt": "2024-07-10T14:45:33.351Z",
-          "views": 12345,
-          "likes": 567,
-          "imageUrl": "",
+          "name": "Плащ невидимка",
+          "price": 10000000,
+          "createdAt": "2024-08-12T20:16:55.351Z",
+          "views": 900,
+          "likes": 19,
+          "imageUrl": "https://picsum.photos/300/302",
           "count": 1
         },
         {
@@ -228,7 +229,7 @@
           "createdAt": "2024-07-05T12:20:15.351Z",
           "views": 4567,
           "likes": 89,
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/300/307",
           "count": 1
         }
       ]
@@ -238,161 +239,32 @@
       "status": 2,
       "createdAt": "2024-06-22T15:40:12.351Z",
       "finishedAt": "",
-      "total": 84000,
+      "total": 41500,
       "deliveryWay": "pickup",
       "items": [
         {
           "id": "4",
-          "name": "Гитара",
-          "description": "Акустическая гитара, дерево, 6 струн.",
-          "price": 40000,
-          "createdAt": "2024-06-20T10:30:55.351Z",
-          "views": 34567,
-          "likes": 1500,
-          "imageUrl": "",
+          "name": "Ковер",
+          "description": "Стильный модный, как у бабушки в деревне :)))",
+          "price": 5000,
+          "createdAt": "2024-07-12T20:16:55.351Z",
+          "views": 2000000,
+          "likes": 2,
+          "imageUrl": "https://picsum.photos/300/303",
           "count": 1
         },
         {
           "id": "7",
-          "name": "Комплект струн для гитары",
+          "name": "Угловой диван",
+          "description": "Угловой диван с мягкой обивкой.",
           "price": 1500,
-          "createdAt": "2024-06-21T08:40:12.351Z",
-          "views": 456,
-          "likes": 12,
-          "imageUrl": "",
+          "createdAt": "2024-07-08T09:25:45.351Z",
+          "views": 5,
+          "likes": 2,
+          "imageUrl": "https://picsum.photos/300/305",
           "count": 2
         }
       ]
-    },
-    {
-      "id": "5",
-      "status": 5,
-      "createdAt": "2024-08-05T09:25:45.351Z",
-      "finishedAt": "2024-08-10T14:20:55.351Z",
-      "total": 56000,
-      "deliveryWay": "cdek",
-      "items": [
-        {
-          "id": "10",
-          "name": "Смарт-часы",
-          "description": "Умные часы с фитнес-функциями.",
-          "price": 56000,
-          "createdAt": "2024-07-30T10:10:30.351Z",
-          "views": 9876,
-          "likes": 567,
-          "imageUrl": "",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "status": 6,
-      "createdAt": "2024-07-01T12:00:00.351Z",
-      "finishedAt": "2024-07-10T18:45:30.351Z",
-      "total": 15000,
-      "deliveryWay": "post",
-      "items": [
-        {
-          "id": "11",
-          "name": "Беспроводные наушники",
-          "price": 15000,
-          "createdAt": "2024-06-29T09:25:45.351Z",
-          "views": 4567,
-          "likes": 123,
-          "imageUrl": "",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "status": 3,
-      "createdAt": "2024-07-22T13:15:55.351Z",
-      "finishedAt": "",
-      "total": 23000,
-      "deliveryWay": "mail",
-      "items": [
-        {
-          "id": "12",
-          "name": "Кофеварка",
-          "price": 23000,
-          "createdAt": "2024-07-20T10:55:33.351Z",
-          "views": 5678,
-          "likes": 230,
-          "imageUrl": "",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "status": 0,
-      "createdAt": "2024-08-01T10:20:55.351Z",
-      "finishedAt": "",
-      "total": 99000,
-      "deliveryWay": "sdek",
-      "items": [
-        {
-          "id": "13",
-          "name": "Геймерская клавиатура",
-          "price": 50000,
-          "createdAt": "2024-07-30T12:15:55.351Z",
-          "views": 1234,
-          "likes": 345,
-          "imageUrl": "",
-          "count": 1
-        },
-        {
-          "id": "14",
-          "name": "Геймерская мышь",
-          "price": 49000,
-          "createdAt": "2024-07-28T09:35:55.351Z",
-          "views": 987,
-          "likes": 120,
-          "imageUrl": "",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "status": 1,
-      "createdAt": "2024-08-08T14:30:55.351Z",
-      "finishedAt": "",
-      "total": 7500,
-      "deliveryWay": "pickup",
-      "items": [
-        {
-          "id": "15",
-          "name": "Флешка 64 ГБ",
-          "price": 7500,
-          "createdAt": "2024-08-07T08:50:55.351Z",
-          "views": 123,
-          "likes": 12,
-          "imageUrl": "",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "status": 4,
-      "createdAt": "2024-07-10T18:20:55.351Z",
-      "finishedAt": "2024-07-12T10:20:55.351Z",
-      "total": 42000,
-      "deliveryWay": "post",
-      "items": [
-      {        
-        "id": "16",
-        "name": "Электрический чайник",
-        "price": 42000,
-        "createdAt": "2024-07-09T14:10:45.351Z",
-        "views": 3421,
-        "likes": 210,
-        "imageUrl": "",
-        "count": 1
-      }
-    ]
-  }]
+    }
+  ]
 }
