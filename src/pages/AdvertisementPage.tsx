@@ -33,12 +33,13 @@ const AdvertisementPage = () => {
       <EditAdvertisement advertisement={advertisement} onClose={advertisementsStore.editAdvertisement}
     />
       <img 
-            src={advertisement?.imageUrl}
-            alt={`Изображение ${advertisement?.name}`}
-            width='272'
-            />
-        <Icon icon={LikeOutlined} textForIcon={String(advertisement?.likes)} />
-        <Icon icon={EyeOutlined} textForIcon={String(advertisement?.views)} />
+          src={advertisement?.imageUrl}
+          alt={`Изображение ${advertisement?.name}`}
+          width='272'
+      />
+      <p>Стоимость: {advertisement?.price}</p>
+      <Icon icon={LikeOutlined} textForIcon={String(advertisement?.likes)} />
+      <Icon icon={EyeOutlined} textForIcon={String(advertisement?.views)} />
 
     </main>
   );

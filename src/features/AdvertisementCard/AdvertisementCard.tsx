@@ -26,6 +26,7 @@ const AdvertisementCard: React.FC<AdvertisementProps> = ({ id, name, imageUrl, p
             alt={`Изображение ${name}`}
             width='272'
             />
+        <p>Стоимость: {price}</p>
         <Icon icon={LikeOutlined} textForIcon={String(likes)} />
         <Icon icon={EyeOutlined} textForIcon={String(views)} />
       </List.Item>
