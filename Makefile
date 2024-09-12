@@ -17,3 +17,6 @@ stop:
 
 logs:
 	docker logs ${DOCKER_USERNAME}-${APPLICATION_NAME}
+
+clean: stop
+	docker rmi ${DOCKER_USERNAME}/${APPLICATION_NAME}:${VERSION} || true
