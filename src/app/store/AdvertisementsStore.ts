@@ -86,23 +86,28 @@ class AdvertisementsStore {
     }
   }
 
-  async editAdvertisement(payload: AdvertisementToSendType) {
+  async editAdvertisement(id: number, payload: AdvertisementToSendType) {
     try {
-      const response = await fetch('http://localhost:3000/advertisements', {
-        method: 'POST',
+      const response = await fetch(`http://localhost:3000/advertisements/${id}`, {
+        method: 'PATCH',
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
       });
+  
       if (!response.ok) {
-        throw new Error('Error while sending a new advertisement to the server');
+        throw new Error('Error while updating the advertisement on the server');
       }
+  
       const data = await response.json();
+  
       this.fetchAdvertisements(this.currentPage, this.elementsPerPage);
-    } catch {
+    } catch (error) {
+      console.error('Error updating advertisement:', error);
     }
   }
+  
 
   setPage(page: number) {
     this.currentPage = page;
