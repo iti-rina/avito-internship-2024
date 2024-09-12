@@ -5,17 +5,45 @@ class OrdersStore {
   orders: OrderType[] = [];
   loading: boolean = false;
   error: string | null = null;
+  sort = '';
+  filter = '';
+
 
   constructor() {
     makeAutoObservable(this);
   }
 
   async getOrders() {
+
     this.loading = true;
     this.error = null;
 
     try {
-      const response = await fetch('http://localhost:3000/orders');
+      const response = await fetch(`http://localhost:3000/orders?${this.sort}&${this.filter}`);
+      if (!response.ok) {
+        throw new Error('Error while getting a list of orders');
+      }
+      const data = await response.json();
+
+      runInAction(() => {
+        this.orders = data;
+        this.loading = false;
+      });
+
+    } catch (error: any) {
+      runInAction(() => {
+        this.error = error.message;
+        this.loading = false;
+      });
+    }
+  }
+
+  async getOrdersWithFilters() {
+    this.loading = true;
+    this.error = null;
+
+    try {
+      const response = await fetch('http://localhost:3000/orders?');
       if (!response.ok) {
         throw new Error('Error while getting a list of orders');
       }
