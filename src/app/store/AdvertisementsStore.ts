@@ -7,30 +7,31 @@ class AdvertisementsStore {
   elementsPerPage = 10;
   loading: boolean = false;
   error: string | null = null;
-  hasMore = true;
+  totalCount = 0;
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  async getAdvertisements(page: number) {
+  async fetchAdvertisements(page: number, pageSize: number) {
     this.loading = true;
     this.error = null;
 
     try {
-      const response = await fetch(`http://localhost:3000/advertisements?_start=${page === 1 ? 0 : (this.currentPage - 1) * this.elementsPerPage }&_limit=${this.elementsPerPage}`);
+      const response = await fetch(`http://localhost:3000/advertisements?_page=${page}&_limit=${pageSize}`);
       if (!response.ok) {
         throw new Error('Error while getting a list of advertisements');
       }
+
       const data = await response.json();
+      this.totalCount = Number(response.headers.get('X-Total-Count'));
 
       runInAction(() => {
-        this.advertisements = [...this.advertisements, ...data];
+        this.advertisements = [...data];
         this.currentPage = page;
+        this.elementsPerPage = pageSize;
         this.loading = false;
-        if (data.length < this.elementsPerPage) {
-          this.hasMore = false;
-        }
+
       });
     } catch (error: any) {
       runInAction(() => {
@@ -53,20 +54,21 @@ class AdvertisementsStore {
         throw new Error('Error while sending a new advertisement to the server');
       }
       const data = await response.json();
-      this.getAdvertisements(this.currentPage);
+      this.fetchAdvertisements(this.currentPage, this.elementsPerPage);
     } catch {
     }
   }
 
+
   setPage(page: number) {
-    if (!this.hasMore || this.loading) return;
     this.currentPage = page;
-    this.getAdvertisements(page);
+    this.fetchAdvertisements(page, this.elementsPerPage);
   }
 
   setPageSize(pageSize: number) {
     this.elementsPerPage = pageSize;
-    this.getAdvertisements(this.currentPage);
+    this.currentPage = 1
+    this.fetchAdvertisements(this.currentPage, this.elementsPerPage);
   }
 }
 

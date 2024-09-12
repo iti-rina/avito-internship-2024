@@ -7,7 +7,7 @@ import SearchBar from "@widgets/header/SearchBar";
 
 const AdvertisementsList: React.FC = observer(() => {
   useEffect(() => {
-    advertisementsStore.getAdvertisements(advertisementsStore.currentPage);
+    advertisementsStore.fetchAdvertisements(advertisementsStore.currentPage, advertisementsStore.elementsPerPage);
   }, []);
 
   if (advertisementsStore.loading) {
@@ -27,11 +27,12 @@ const AdvertisementsList: React.FC = observer(() => {
         dataSource={advertisementsStore.advertisements}
         renderItem={item => (
           <AdvertisementCard
-          name={item.name}
-          imageUrl={item.imageUrl ? item.imageUrl : ''}
-          price={item.price}
-          views={item.views}
-          likes={item.likes}
+            id={item.id}
+            name={item.name}
+            imageUrl={item.imageUrl ? item.imageUrl : ''}
+            price={item.price}
+            views={item.views}
+            likes={item.likes}
           />
         )}
       />

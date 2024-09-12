@@ -3,7 +3,7 @@ import { Pagination, PaginationProps } from 'antd';
 import { observer } from 'mobx-react-lite';
 import { advertisementsStore } from '@app/store';
 
-const PaginationComponent: React.FC<PaginationProps> = observer(({showTotal}) => {
+const PaginationComponent: React.FC<PaginationProps> = observer(({}) => {
   const handlePageChange = (page: number) => {
     advertisementsStore.setPage(page);
   }
@@ -15,9 +15,10 @@ const PaginationComponent: React.FC<PaginationProps> = observer(({showTotal}) =>
       current={advertisementsStore.currentPage}
       pageSize={advertisementsStore.elementsPerPage}
       onChange={(page) => handlePageChange(page)}
-      total={advertisementsStore.hasMore ? advertisementsStore.currentPage * advertisementsStore.elementsPerPage : advertisementsStore.advertisements.length}
+      total={advertisementsStore.totalCount}
+      showTotal={() => `Всего объявлений ${advertisementsStore.totalCount}`}
       showSizeChanger
-      onShowSizeChange={(current, size) => handleChangePageSize(current, size)}
+      onShowSizeChange={handleChangePageSize}
       locale={{
         items_per_page: 'на странице'
       }}
