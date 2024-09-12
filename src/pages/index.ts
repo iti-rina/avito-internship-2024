@@ -1,3 +1,4 @@
 import AdvertisementsPage from './AdvertisementsPage';
+import OrdersPage from './OrdersPage';
 
-export { AdvertisementsPage }
+export { AdvertisementsPage, OrdersPage }
