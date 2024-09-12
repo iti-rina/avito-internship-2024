@@ -19,13 +19,17 @@ interface EditAdvertisementProps {
 }
 
 const EditAdvertisement: React.FC<EditAdvertisementProps> = observer(({ advertisement, onClose }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [form] = Form.useForm();
 
   useEffect(() => {
     form.setFieldsValue(advertisement);
   }, [form, advertisement]);
 
+  const showModal = () => {
+    setOpen(true);
+  };
+  
   const handleClose = () => {
     setOpen(false);
     onClose();
@@ -39,49 +43,54 @@ const EditAdvertisement: React.FC<EditAdvertisementProps> = observer(({ advertis
   };
 
   return (
-    <Modal
-      title="Редактировать объявление"
-      open={open}
-      onCancel={handleClose}
-      footer={null}
-    >
-      <Form
-        form={form}
-        layout="vertical"
-        onFinish={onFinish}
+    <>
+      <Button type="primary" onClick={showModal}>
+        Редактировать объявление
+      </Button>
+      <Modal
+        title="Редактировать объявление"
+        open={open}
+        onCancel={handleClose}
+        footer={null}
       >
-        <Form.Item
-          label="Название"
-          name="name"
-          rules={[{ required: true }]}
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={onFinish}
         >
-          <Input placeholder="Введите название товара" />
-        </Form.Item>
-        <Form.Item
-          label="Описание"
-          name="description"
-        >
-          <Input.TextArea placeholder="Введите описание товара" />
-        </Form.Item>
-        <Form.Item
-          label="Цена"
-          name="price"
-        >
-          <InputNumber prefix="₽" min={1} style={{ width: '100%' }} />
-        </Form.Item>
-        <Form.Item 
-          label="Фотография"
-          name="imageUrl"
-        >
-          <Input placeholder="Введите URL изображения" />
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Обновить
-          </Button>
-        </Form.Item>
-      </Form>
-    </Modal>
+          <Form.Item
+            label="Название"
+            name="name"
+            rules={[{ required: true }]}
+          >
+            <Input placeholder="Введите название товара" />
+          </Form.Item>
+          <Form.Item
+            label="Описание"
+            name="description"
+          >
+            <Input.TextArea placeholder="Введите описание товара" />
+          </Form.Item>
+          <Form.Item
+            label="Цена"
+            name="price"
+          >
+            <InputNumber prefix="₽" min={1} style={{ width: '100%' }} />
+          </Form.Item>
+          <Form.Item 
+            label="Фотография"
+            name="imageUrl"
+          >
+            <Input placeholder="Введите URL изображения" />
+          </Form.Item>
+          <Form.Item>
+            <Button type="primary" htmlType="submit">
+              Обновить
+            </Button>
+          </Form.Item>
+        </Form>
+      </Modal>
+    </>
   );
 });
 
