@@ -4,8 +4,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Icon } from '@shared/components';
 import { LikeOutlined, EyeOutlined } from '@ant-design/icons';
+import { EditAdvertisement } from '@features/EditAdvertisement';
 
-const AdvertisementPage = () => {
+const AdvertisementPage: React.FC = () => {
   const { id } = useParams();
   const [advertisement, setAdvertisement] = useState<AdvertisementType | null>(null);
 
@@ -25,7 +26,6 @@ const AdvertisementPage = () => {
 
 
   return (
-
     <main>
       <h1>{advertisement?.name}</h1>
       
