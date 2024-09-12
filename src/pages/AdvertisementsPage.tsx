@@ -2,23 +2,18 @@ import React from 'react';
 import { AdvertisementsList } from '@features/AdvertisementsList';
 import { Pagination } from '@widgets/pagination';
 import { advertisementsStore } from '@app/store';
+import { NewAdvertisement } from '@features/NewAdvertisement';
 
 const AdvertisementsPage: React.FC = () => {
   const { advertisements } = advertisementsStore;
   let total = advertisements.length;
-  let defaultPageSize = 10;
-  let defaultCurrent = 1;
 
   return (
     <main>
       <h1>Мои объявления</h1>
+      <NewAdvertisement />
       <AdvertisementsList />
-      <Pagination 
-        total={total}
-        showTotal={(total) => `Всего ${total}`}
-        defaultPageSize={defaultPageSize}
-        defaultCurrent={defaultCurrent}
-      />
+      <Pagination />
     </main>
 
   );
